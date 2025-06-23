@@ -51,7 +51,7 @@ h2 {
 }
 
 .background-overlay {
-    background-image: url(images/bg_menu_network.png);
+    background-image: url(../images/bg_menu_network.png);
     background-size: cover;
     position: absolute;
     top: 0;
