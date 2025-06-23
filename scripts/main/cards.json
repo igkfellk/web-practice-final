@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Настройка почтового сервера с нуля на базе Postfix и Dovecot",
+        "description": "Узнайте, как установить и настроить Postfix для отправки и получения почты.",
+        "image": "images/postfix.png"
+    },
+    {
+        "id": 2,
+        "title": "Установка Zabbix 6.0.3 на CentOS 8.5.2111",
+        "description": "Как развернуть Zabbix для мониторинга ваших серверов и приложений.",
+        "image": "images/zabbix.png"
+    },
+    {
+        "id": 3,
+        "title": "Ошибки 1С",
+        "description": "Исправление некоторых ошибок 1С, связанных с COM компонентами.",
+        "image": "images/error.png"
+    },
+    {
+        "id": 4,
+        "title": "Смена портов 1С",
+        "description": "Иногда очень необходима, особенно когда у вас две разные платформы или два разных сервера 1С.",
+        "image": "images/1c.png"
+    },
+    {
+        "id": 5,
+        "title": "Делаем свой сервер сбора логов",
+        "description": "На основе Grafana Loki",
+        "image": "images/grafana_loki.png"
+    }
+]

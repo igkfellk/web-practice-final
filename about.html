@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О блоге | Системное администрирование</title>
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="text-white">
+        <div class="container">
+            <h1 class="text-center">Блог о системном администрировании</h1>
+        </div>
+        <nav class="navbar">
+            <div class="menu">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                    aria-label="Переключить навигацию">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Меню навигации</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+                </div>
+                <div class="offcanvas-body position-relative">
+                    <div class="background-overlay"></div> <!-- Псевдоэлемент для фона -->
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="about.html">О блоге</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Контакты</a>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+                        <button class="btn btn-outline-success" type="submit">Поиск</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="my-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card-about mb-4">
+                        <div class="card-body">
+                            <h2 class="card-title text-center mb-4">О блоге</h2>
+
+                            <p class="card-text">Привет! Меня зовут Игорь Кучеренко, и я рад приветствовать вас на моем
+                                сайте, посвященном системному администрированию.</p>
+
+                            <p class="card-text">Этот блог — моя страсть и проект, который я создал, чтобы делиться
+                                опытом, знаниями и полезными инструментами, которые помогают в повседневной работе
+                                системных администраторов. Я сам работаю в этой области уже много лет и знаю, как важно
+                                иметь доступ к актуальной информации и ресурсам, которые облегчают нашу работу.</p>
+
+                            <h3 class="mt-4 mb-3">В этом блоге вы найдете:</h3>
+
+                            <ul class="feature-list">
+                                <li><strong>Обзоры инструментов:</strong><br>Я собираю и тестирую различные
+                                    онлайн-инструменты для администрирования, тестирования сети и поиска уязвимостей,
+                                    чтобы помочь вам выбрать лучшие решения для своих задач.</li>
+                                <li><strong>Руководства и статьи:</strong><br>Здесь размещены пошаговые инструкции и
+                                    статьи, которые охватывают как базовые, так и продвинутые темы системного
+                                    администрирования. Я стараюсь объяснять сложные концепции простым языком, чтобы
+                                    каждый мог легко разобраться.</li>
+                                <li><strong>Обсуждение технологий:</strong><br>Я всегда открыт для обсуждения новых
+                                    технологий и трендов в области ИТ, и я буду рад видеть ваши комментарии и мнения.
+                                </li>
+                            </ul>
+
+                            <p class="card-text mt-4">Надеюсь, этот блог станет для вас полезным ресурсом и источником
+                                вдохновения. Если у вас есть вопросы или предложения, не стесняйтесь обращаться! Давайте
+                                вместе исследовать мир системного администрирования и делать его лучше!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-light py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 Блог о системном администрировании. Все права защищены.</p>
+            <div class="social-links text-center mt-4">
+                <a href="https://t.me/FellK" target="_blank" class="social-icon">
+                    <i class="bi bi-telegram"></i>
+                </a>
+                <a href="https://github.com/igkfellk/" target="_blank" class="social-icon">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="mailto:i.kucherenko@fellk.ru" class="social-icon">
+                    <i class="bi bi-envelope-fill"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="scripts/main/main.js"></script>
+</body>
+
+</html>
