@@ -8,7 +8,7 @@ const loadMoreCards = () => {
 
     isLoading = true;
 
-    fetch('../scripts/main/cards.json')
+    fetch('scripts/main/cards.json')
         .then(response => response.json())
         .then(data => {
             const container = document.getElementById('cards-container');
