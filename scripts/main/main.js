@@ -61,3 +61,21 @@ const onScroll = () => {
 // Загрузить первые карточки
 document.addEventListener('DOMContentLoaded', loadMoreCards);
 window.addEventListener('scroll', onScroll);
+
+// Переключатель
+const themeSwitch = document.getElementById('themeSwitch');
+const savedTheme = localStorage.getItem('theme') || 'dark';
+
+document.documentElement.setAttribute('data-bs-theme', savedTheme);
+themeSwitch.checked = savedTheme === 'light';
+
+themeSwitch.addEventListener('change', function () {
+    const newTheme = this.checked ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-bs-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+});
+
+const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+});

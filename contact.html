@@ -1,141 +1,185 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="ru" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты | Системное администрирование</title>
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header class="text-white">
-        <div class="container">
-            <h1 class="text-center">Блог о системном администрировании</h1>
-        </div>
-        <nav class="navbar">
-            <div class="menu">
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                    aria-label="Переключить навигацию">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <i class="bi bi-terminal-fill me-2"></i>
+                    <span class="d-none d-sm-inline">SysAdmin Blog</span>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-            </div>
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Меню навигации</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
-                </div>
-                <div class="offcanvas-body position-relative">
-                    <div class="background-overlay"></div>
-
-                    <ul class="navbar-nav">
+                
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html">Главная</a>
+                            <a class="nav-link" href="index.html">
+                                <i class="bi bi-house-door me-1"></i>Главная
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">О блоге</a>
+                            <a class="nav-link" href="about.html">
+                                <i class="bi bi-info-circle me-1"></i>О блоге
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="contact.html">Контакты</a>
+                            <a class="nav-link active" href="contact.html">
+                                <i class="bi bi-envelope me-1"></i>Контакты
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                <i class="bi bi-collection me-1"></i>Категории
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="#">Linux</a></li>
+                                <li><a class="dropdown-item" href="#">Windows Server</a></li>
+                                <li><a class="dropdown-item" href="#">Сети</a></li>
+                                <li><a class="dropdown-item" href="#">Мониторинг</a></li>
+                            </ul>
                         </li>
                     </ul>
-
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
-                        <button class="btn btn-outline-success" type="submit">Поиск</button>
-                    </form>
+                    
+                    <div class="d-flex align-items-center">
+                        <form class="d-flex me-3" role="search">
+                            <div class="input-group">
+                                <input class="form-control bg-dark text-white border-secondary" type="search" placeholder="Поиск...">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <div class="form-check form-switch me-3" title="Переключить тему">
+                            <input class="form-check-input" type="checkbox" id="themeSwitch">
+                            <label class="form-check-label" for="themeSwitch">
+                                <i class="bi bi-moon-stars"></i>
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
+    <header class="position-relative overflow-hidden">
+        <div class="background-animation"></div>
+        <div class="container position-relative py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeInDown">Блог о системном администрировании</h1>
+                    <p class="lead mb-4 animate__animated animate__fadeIn animate__delay-1s">Экспертные статьи и руководства для IT-специалистов</p>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main class="my-5">
         <div class="container">
-            <div class="row">
+            <div class="row g-4">
                 <div class="col-lg-6">
-                    <div class="card h-100 contact-card">
-                        <div class="card-body contact-info">
-                            <h2 class="card-title mb-4 text-center">Свяжитесь со мной</h2>
-
-                            <div class="contact-item mb-4">
-                                <div class="contact-icon">
-                                    <i class="bi bi-envelope-fill"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h5>Электронная почта</h5>
-                                    <a href="mailto:i.kucherenko@fellk.ru"
-                                        class="contact-link">i.kucherenko@fellk.ru</a>
-                                </div>
-                            </div>
-
-                            <div class="contact-item mb-4">
-                                <div class="contact-icon">
-                                    <i class="bi bi-telegram"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h5>Telegram</h5>
-                                    <a href="https://t.me/FellK" target="_blank" class="contact-link">@FellK</a>
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 p-lg-5">
+                            <h2 class="card-title display-5 fw-bold mb-4"><i class="bi bi-person-lines-fill me-2"></i>Свяжитесь со мной</h2>
+                            
+                            <div class="contact-item p-3 mb-3 rounded-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="contact-icon bg-primary bg-opacity-10 text-primary rounded-3 me-3">
+                                        <i class="bi bi-envelope-fill fs-3"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">Электронная почта</h5>
+                                        <a href="mailto:i.kucherenko@fellk.ru" class="text-decoration-none">i.kucherenko@fellk.ru</a>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="contact-item mb-4">
-                                <div class="contact-icon">
-                                    <i class="bi bi-github"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h5>GitHub</h5>
-                                    <a href="https://github.com/igkfellk/" target="_blank"
-                                        class="contact-link">github.com/igkfellk</a>
+                            
+                            <div class="contact-item p-3 mb-3 rounded-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="contact-icon bg-primary bg-opacity-10 text-primary rounded-3 me-3">
+                                        <i class="bi bi-telegram fs-3"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">Telegram</h5>
+                                        <a href="https://t.me/FellK" target="_blank" class="text-decoration-none">@FellK</a>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="social-links text-center mt-4">
-                                <a href="https://t.me/FellK" target="_blank" class="social-icon">
-                                    <i class="bi bi-telegram"></i>
-                                </a>
-                                <a href="https://github.com/igkfellk/" target="_blank" class="social-icon">
-                                    <i class="bi bi-github"></i>
-                                </a>
-                                <a href="mailto:i.kucherenko@fellk.ru" class="social-icon">
-                                    <i class="bi bi-envelope-fill"></i>
-                                </a>
+                            
+                            <div class="contact-item p-3 rounded-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="contact-icon bg-primary bg-opacity-10 text-primary rounded-3 me-3">
+                                        <i class="bi bi-github fs-3"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">GitHub</h5>
+                                        <a href="https://github.com/igkfellk/" target="_blank" class="text-decoration-none">github.com/igkfellk</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4 pt-3 border-top">
+                                <h5 class="mb-3">Я в соцсетях</h5>
+                                <div class="social-links">
+                                    <a href="https://t.me/FellK" target="_blank" class="social-icon me-2">
+                                        <i class="bi bi-telegram"></i>
+                                    </a>
+                                    <a href="https://github.com/igkfellk/" target="_blank" class="social-icon me-2">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                    <a href="mailto:i.kucherenko@fellk.ru" class="social-icon">
+                                        <i class="bi bi-envelope-fill"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-6">
-                    <div class="card contact-card">
-                        <div class="card-body">
-                            <h2 class="card-title mb-4">Форма обратной связи</h2>
-
-                            <form id="contactForm">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4 p-lg-5">
+                            <h2 class="card-title display-5 fw-bold mb-4"><i class="bi bi-send-fill me-2"></i>Форма обратной связи</h2>
+                            
+                            <form id="contactForm" class="needs-validation" novalidate>
                                 <div class="mb-3">
-                                    <label for="name" class="form-label">Ваше имя</label>
+                                    <label for="name" class="form-label">Ваше имя <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" id="name" required>
+                                    <div class="invalid-feedback">Пожалуйста, введите ваше имя</div>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
+                                    <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
                                     <input type="email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback">Пожалуйста, введите корректный email</div>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="subject" class="form-label">Тема</label>
+                                    <label for="subject" class="form-label">Тема <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" id="subject" required>
+                                    <div class="invalid-feedback">Пожалуйста, укажите тему сообщения</div>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="message" class="form-label">Сообщение</label>
+                                    <label for="message" class="form-label">Сообщение <span class="text-danger">*</span></label>
                                     <textarea class="form-control" id="message" rows="5" required></textarea>
+                                    <div class="invalid-feedback">Пожалуйста, напишите ваше сообщение</div>
                                 </div>
 
                                 <div class="d-grid">
-                                    <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="bi bi-send me-2"></i>Отправить сообщение
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -144,25 +188,73 @@
             </div>
         </div>
     </main>
-
-    <footer class="bg-light py-4">
-        <div class="container text-center">
-            <p>&copy; 2025 Блог о системном администрировании. Все права защищены.</p>
-            <div class="social-links text-center mt-4">
-                <a href="https://t.me/FellK" target="_blank" class="social-icon">
-                    <i class="bi bi-telegram"></i>
-                </a>
-                <a href="https://github.com/igkfellk/" target="_blank" class="social-icon">
-                    <i class="bi bi-github"></i>
-                </a>
-                <a href="mailto:i.kucherenko@fellk.ru" class="social-icon">
-                    <i class="bi bi-envelope-fill"></i>
-                </a>
+    <footer class="bg-dark text-white-50 pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-4">Блог о системном администрировании</h5>
+                    <p>Экспертные статьи и руководства для IT-специалистов. Помогаем системным администраторам с 2025 года.</p>
+                    <div class="social-links mt-4">
+                        <a href="https://t.me/FellK" target="_blank" class="social-icon">
+                            <i class="bi bi-telegram"></i>
+                        </a>
+                        <a href="https://github.com/igkfellk/" target="_blank" class="social-icon">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="mailto:i.kucherenko@fellk.ru" class="social-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-white mb-4">Разделы</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0">Главная</a></li>
+                        <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0">О блоге</a></li>
+                        <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0">Контакты</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Архив</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-white mb-4">Категории</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Linux</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Windows Server</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Сети</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Мониторинг</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="text-white mb-4">Контакты</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2 d-flex align-items-center">
+                            <i class="bi bi-envelope me-2"></i>
+                            <a href="mailto:i.kucherenko@fellk.ru" class="nav-link p-0">i.kucherenko@fellk.ru</a>
+                        </li>
+                        <li class="nav-item mb-2 d-flex align-items-center">
+                            <i class="bi bi-telegram me-2"></i>
+                            <a href="https://t.me/FellK" target="_blank" class="nav-link p-0">@FellK</a>
+                        </li>
+                        <li class="nav-item mb-2 d-flex align-items-center">
+                            <i class="bi bi-github me-2"></i>
+                            <a href="https://github.com/igkfellk/" target="_blank" class="nav-link p-0">igkfellk</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Блог о системном администрировании. Все права защищены.</p>
             </div>
         </div>
     </footer>
-    <script src="scripts/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="scripts/main/form.js"></script>
-</body>
+    <button id="backToTopBtn" class="back-to-top" title="Наверх">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/main/scroll.js"></script>
+    <script src="scripts/main/form.js"></script>
+    <script src="scripts/main/main.js"></script>  
+</body>
 </html>
