@@ -111,9 +111,18 @@ header {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
+.card-form {
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: var(--light-color);
+    border: solid;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.288);
 }
 
 .card-img-top {
